@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.feature_selection import SelectKBest, mutual_info_regression
 
-# upTwo = "../../"
-upTwo = ""
+upTwo = "../../"
+# upTwo = ""
 
 df = pd.read_pickle(upTwo + "data/interim/data_engineered.pkl")
 
