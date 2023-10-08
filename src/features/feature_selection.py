@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.feature_selection import SelectKBest, mutual_info_regression
 
-# upTwo = "../../"
-upTwo = ""
+upTwo = "../../"
+# upTwo = ""
 
 df = pd.read_pickle(upTwo + "data/interim/data_engineered.pkl")
 
@@ -30,9 +30,5 @@ best_features_df = pd.concat([best_features_df, df["Stage1.Output.Measurement0.U
 # moved this line after concat
 best_features_df.to_pickle(upTwo + "data/processed/best_features.pkl")
 
-# create a plot that provides an overview of best_features_df
-import seaborn as sns
-
-sns.pairplot(best_features_df)
-plt.show()
-# conda env update -n manufacturing-process --file environment.yml
+# show first 20 rows of best_features_df with head
+print(best_features_df.head(20))
