@@ -33,6 +33,6 @@ best_features_df.to_pickle(upTwo + "data/processed/best_features.pkl")
 # create a plot that provides an overview of best_features_df
 import seaborn as sns
 
-sns.pairplot(best_features_df)
-plt.show()
+# sns.pairplot(best_features_df)
+# plt.show()
 # conda env update -n manufacturing-process --file environment.yml
